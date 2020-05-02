@@ -1,0 +1,742 @@
+Script started on Mon Nov 19 22:08:12 2018
+[?1034hbash-3.2$ who am i 
+zhoumingcong ttys000  Nov 19 22:08 
+bash-3.2$ date
+2018年11月19日 星期一 22时08分16秒 EST
+bash-3.2$  [Kpwd
+/Users/zhoumingcong/satispy
+bash-3.2$ Python3 [5Ppwddatewho am i [5Pexitpython[2Pexitssh mzhou272@compute.gaul.csd.uwo.ca[C[C[C[C[C[C[C[C[C[Cpython[Kssh mzhou272@compute.gaul.csd.uwo.ca[C[C[C[C[C[C[C[C[C[Cexit[Kpython[2Pexitwho am i [5Pdate[1PpwdPython3 solver.py queens.txt 
+
+Attempting to solve: ((a | b | c) & -(a & b & c)) & ((d | e | f) & -(d & e & f)) & ((g | h | i) & -(g & h & i)) & ((a | d | g) & -(a & d & g)) & ((b | e | h) & -(b & e & h)) & ((c | f | i) & -(c & f & i)) & ((a | e | i) & -(a & e & i))
+
+The expression is satisfiable with:
+
+--1:
+a: True
+b: False
+c: False
+d: False
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--2:
+a: True
+b: False
+c: False
+d: False
+e: False
+f: True
+g: True
+h: True
+i: False
+
+--3:
+a: True
+b: False
+c: False
+d: True
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--4:
+a: False
+b: True
+c: False
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--5:
+a: False
+b: True
+c: True
+d: True
+e: False
+f: False
+g: False
+h: False
+i: True
+
+--6:
+a: False
+b: True
+c: True
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--7:
+a: True
+b: False
+c: True
+d: False
+e: False
+f: True
+g: True
+h: True
+i: False
+
+--8:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: False
+h: True
+i: False
+
+--9:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: True
+h: False
+i: False
+
+--10:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: True
+h: True
+i: False
+
+--11:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: True
+g: False
+h: False
+i: True
+
+--12:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--13:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: False
+g: False
+h: False
+i: True
+
+--14:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: True
+g: False
+h: True
+i: True
+
+--15:
+a: True
+b: False
+c: True
+d: False
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--16:
+a: True
+b: False
+c: True
+d: True
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--17:
+a: True
+b: False
+c: True
+d: True
+e: False
+f: False
+g: False
+h: True
+i: False
+
+--18:
+a: True
+b: False
+c: False
+d: False
+e: True
+f: True
+g: False
+h: True
+i: False
+
+--19:
+a: True
+b: True
+c: False
+d: True
+e: False
+f: False
+g: False
+h: False
+i: True
+
+--20:
+a: True
+b: False
+c: False
+d: False
+e: True
+f: True
+g: True
+h: True
+i: False
+
+--21:
+a: True
+b: True
+c: False
+d: True
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--22:
+a: True
+b: True
+c: False
+d: True
+e: False
+f: True
+g: False
+h: False
+i: True
+
+--23:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: False
+h: False
+i: True
+
+--24:
+a: True
+b: True
+c: False
+d: True
+e: False
+f: True
+g: False
+h: True
+i: True
+
+--25:
+a: True
+b: True
+c: False
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--26:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: False
+g: True
+h: False
+i: True
+
+--27:
+a: True
+b: False
+c: False
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--28:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: False
+h: True
+i: True
+
+--29:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: False
+h: True
+i: False
+
+--30:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: False
+h: False
+i: True
+
+--31:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: False
+g: True
+h: False
+i: False
+
+--32:
+a: False
+b: True
+c: False
+d: True
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--33:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: False
+g: False
+h: True
+i: False
+
+--34:
+a: False
+b: False
+c: True
+d: False
+e: True
+f: False
+g: True
+h: False
+i: False
+
+--35:
+a: False
+b: True
+c: True
+d: False
+e: True
+f: False
+g: True
+h: False
+i: False
+
+--36:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: True
+h: False
+i: False
+
+--37:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: True
+g: False
+h: True
+i: False
+
+--38:
+a: True
+b: False
+c: False
+d: False
+e: False
+f: True
+g: False
+h: True
+i: True
+
+--39:
+a: False
+b: False
+c: True
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--40:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: True
+h: True
+i: False
+
+--41:
+a: False
+b: True
+c: True
+d: True
+e: True
+f: False
+g: True
+h: False
+i: False
+
+--42:
+a: True
+b: False
+c: False
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--43:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--44:
+a: False
+b: False
+c: True
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--45:
+a: True
+b: False
+c: True
+d: True
+e: True
+f: False
+g: False
+h: True
+i: False
+
+--46:
+a: False
+b: True
+c: True
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--47:
+a: False
+b: False
+c: True
+d: False
+e: True
+f: True
+g: True
+h: True
+i: False
+
+--48:
+a: False
+b: False
+c: True
+d: False
+e: True
+f: False
+g: True
+h: True
+i: False
+
+--49:
+a: False
+b: True
+c: False
+d: True
+e: False
+f: True
+g: True
+h: False
+i: True
+
+--50:
+a: False
+b: True
+c: False
+d: False
+e: True
+f: True
+g: True
+h: False
+i: True
+
+--51:
+a: False
+b: True
+c: False
+d: False
+e: False
+f: True
+g: True
+h: False
+i: True
+
+--52:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: False
+h: True
+i: True
+
+--53:
+a: False
+b: False
+c: True
+d: True
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--54:
+a: False
+b: True
+c: True
+d: True
+e: True
+f: False
+g: False
+h: False
+i: True
+
+--55:
+a: False
+b: True
+c: False
+d: True
+e: True
+f: False
+g: False
+h: False
+i: True
+
+--56:
+a: False
+b: True
+c: True
+d: True
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--57:
+a: False
+b: False
+c: True
+d: False
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--58:
+a: False
+b: True
+c: True
+d: False
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--59:
+a: False
+b: True
+c: False
+d: False
+e: True
+f: False
+g: True
+h: False
+i: True
+
+--60:
+a: False
+b: True
+c: True
+d: True
+e: False
+f: False
+g: True
+h: False
+i: True
+
+--61:
+a: True
+b: False
+c: True
+d: True
+e: False
+f: False
+g: False
+h: True
+i: True
+
+--62:
+a: True
+b: False
+c: False
+d: True
+e: False
+f: True
+g: False
+h: True
+i: True
+
+--63:
+a: True
+b: True
+c: False
+d: False
+e: False
+f: True
+g: True
+h: False
+i: True
+
+--64:
+a: True
+b: True
+c: False
+d: False
+e: True
+f: True
+g: True
+h: False
+i: False
+
+--65:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: True
+g: True
+h: True
+i: False
+
+--66:
+a: True
+b: False
+c: True
+d: False
+e: True
+f: False
+g: True
+h: True
+i: False
+bash-3.2$ exit
+exit
+
+Script done on Mon Nov 19 22:09:18 2018

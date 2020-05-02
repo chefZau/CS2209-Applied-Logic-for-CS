@@ -1,0 +1,7 @@
+(a | b | c) & -(a & b & c)
+(d | e | f) & -(d & e & f)
+(g | h | i) & -(g & h & i)
+(a | d | g) & -(a & d & g)
+(b | e | h) & -(b & e & h)
+(c | f | i) & -(c & f & i)
+(a | e | i) & -(a & e & i)

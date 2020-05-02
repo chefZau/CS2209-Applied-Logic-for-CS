@@ -1,0 +1,111 @@
+Question 1
+
+%1st line: base case: one atom in list---this is the last item
+%2nd line: last item in the list is the last item in the tail of the list
+last([A],A).
+last([_|T],A) :- last(T,A).
+
+
+
+Question 2
+
+%My solution for 8 Queens
+eightQueens(Board) :- permutation([1,2,3,4,5,6,7,8],Board) , checkDiagonals(Board).
+
+%checkDiagonals%
+%1st line -- base case for 8 Queens
+%2nd line -- 8 Queens (shrinks board from the left)
+checkDiagonals([]).
+checkDiagonals([H|T]) :- chkDiagUp(H,T) , chkDiagDown(H,T) , checkDiagonals(T).
+
+%NOTE: chkDiagUp and chkDiagDown only need to check the diagonals to the right
+%.    because if there is an attacking queen to the left, checkDiagonals would have already failed
+%chkDiagUp%
+%1st line -- base case
+%2nd line -- go beyond top of the board without problem
+%3rd line -- don't go beyond top of board
+%         -- NOTE: top of board is always 1
+chkDiagUp(_,[]).
+%chkDiagUp(H1,[H2|T]) :- R is H1-1 , R =\= H2 , chkDiagUp(R,T).
+chkDiagUp(H1,[H2|T]) :- R is H1-1 , (R > 0 -> R =\= H2 , chkDiagUp(R,T) ; true).
+
+%chkDiagDown%
+%1st line -- base case for 8 Queens
+%2nd line -- go beyond bottom of the board without problem
+%3rd line -- don't go beyond bottom of board for 8 Queens
+%         -- NOTE: bottom of board is always 8
+chkDiagDown(_,[]).
+%chkDiagDown(H1,[H2|T]) :- R is H1+1 , R =\= H2 , chkDiagDown(R,T).
+chkDiagDown(H1,[H2|T]) :- R is H1+1 , (R < 9 -> R =\= H2 , chkDiagDown(R,T) ; true).
+
+
+%My solution for n Queens
+nQueens(N,Board) :- numlist(1,N,List) , permutation(List,Board) , checkDiagonals(N,Board).
+
+%checkDiagonals%
+%1st line -- base case for N Queens (function definition needs extra parameter)
+%2nd line -- N Queens (function definition needs N)
+checkDiagonals(_,[]).
+checkDiagonals(N,[H|T]) :- chkDiagUp(H,T) , chkDiagDown(N,H,T) , checkDiagonals(N,T).
+
+%chkDiagUp%
+%1st line -- base case
+%2nd line -- go beyond top of the board without problem
+%3rd line -- don't go beyond top of board
+%         -- NOTE: top of board is always 1
+chkDiagUp(_,[]).
+%chkDiagUp(H1,[H2|T]) :- R is H1-1 , R =\= H2 , chkDiagUp(R,T).
+chkDiagUp(H1,[H2|T]) :- R is H1-1 , (R > 0 -> R =\= H2 , chkDiagUp(R,T) ; true).
+
+%chkDiagDown%
+%1st line -- base case for N Queens (function definition needs extra parameter)
+%2nd line -- go beyond bottom of the board without problem
+%3rd line -- don't go beyond bottom of board for N Queens
+%         -- NOTE: bottom of board depends on N (function definition needs N)
+chkDiagDown(_,_,[]).
+%chkDiagDown(H1,[H2|T]) :- R is H1+1 , R =\= H2 , chkDiagDown(R,T).
+chkDiagDown(N,H1,[H2|T]) :- R is H1+1 , (R < N+1 -> R =\= H2 , chkDiagDown(N,R,T) ; true).
+
+
+
+Question 3
+
+%Place n queens on the board
+%NOTE: I gave the 3 lines below in the assignment and then changed it
+%      to the 4th line below
+%      Reference to columns and rows below refer to the structure in the 3rd line
+row(1..n).
+col(1..n).
+n {queen(I,J) : col(I),row(J)} n.
+%n {queen(1..n,1..n) } n.
+
+%Integrity Constraints
+%Disallow models which have queens in the same column
+:- queen(I,J1), queen(I,J2), J1 != J2.
+%Disallow models which have queens in the same row
+:- queen(I1,J), queen(I2,J), I1 != I2.
+
+%Diagonals
+%The following idea is used in the two integrity constraints below:
+%   The board positions that form diagonals have a simple arithmetic constraint:
+%   Diagonals going from lower left to upper right direction: adding the column
+%   and row gives the same number
+%   Diagonals going from upper left to lower right direction: subtracting the column
+%   and row (in either direction) gives the same number
+%   Example (1,2) (2,3) (3,4) gives 1 (or -1)
+%           (1,4) (2,3) (3,2) gives 5
+%Disallow models which have queens in the same diagonal (upper left to
+%   lower right direction)
+%  Refering to two queens, not the same board position, subtracting column and
+%   row---is it the same number
+:- queen(I,J), queen(II,JJ), (I,J) != (II,JJ), I-J == II-JJ.
+%Disallow models which have queens in the same diagonal(lower left to
+%   upper right direction)
+%  Refering to two queens, not the same board position, adding column and
+%   row---is it the same number
+:- queen(I,J), queen(II,JJ), (I,J) != (II,JJ), I+J == II+JJ.
+
+%Output
+%Show just the queen positions that are in the stable models
+#show queen/2.
+
